@@ -6,13 +6,22 @@ import Header from './components/Header';
 import APropos from './pages/A_Propos';
 import Logement from './pages/Logement';
 import Footer from './components/Footer';
+import { createGlobalStyle } from 'styled-components'
 
 const container = document.getElementById('root');
 const root = ReactDOMClient.createRoot(container);
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0 auto;
+    font-family: "Montserrat-Medium", Helvetica;
+  }
+`
+
 root.render(
   <React.StrictMode>
     <Router>
+        <GlobalStyle/>
         <Header />  
           <Routes>
               <Route path="/" element={<Accueil />} />

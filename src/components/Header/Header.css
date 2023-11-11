@@ -1,11 +1,12 @@
 .NavContainer {
   height: 68px;
-  width: 100%;
   display: flex;
   flex-direction: row;
   align-content: space-between;
   align-items: center;
   justify-content: space-between;
+  margin: 40px auto;
+  width: 86%;
 }
 
 .NavContainer .HomeLogo {
