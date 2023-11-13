@@ -2,10 +2,19 @@
   height: 340px;
   width: 340px;
   border-radius: 10px;
-  background: linear-gradient(180deg, #ff5f5f 0%, #923737 100%);
+/*  background: linear-gradient(180deg, #b6b2b2 0%, #5a5959 100%); */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin: 20px 10px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.Thumb:hover {
+  box-shadow: 12px 22px 14px -10px rgba(0,0,0,0.1);
+  /*transform: translateY(5px);*/
 }
 
 .TitreDeLaLocation {
@@ -18,6 +27,8 @@
   line-height: 25.7px;
   margin: 0;
   padding: 6%;
+  background: linear-gradient(359deg, #1a1919db, #f6f6f600);
+  border-radius: 10px;
 }
 
 
