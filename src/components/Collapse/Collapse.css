@@ -1,0 +1,54 @@
+/* à l'état fermé   */
+.CollapseSmall {
+  height: 47px;
+  max-width: 1023px;
+  background-color: #ff6060;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.CollapseTitle {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  height: 34px;
+  letter-spacing: 0;
+  line-height: 34.2px;
+}
+
+.ArrowButton {
+  background-color: #ff6060;
+  border-style: none;
+  cursor: pointer;
+}
+
+.CollapseLarge {
+  /* min-height: 184px; */
+  max-width: 1023px;
+  background: #F6F6F6;
+  border-radius: 5px;
+  min-height: 100%;
+}
+
+/* à l'état ouvert */
+
+.CollapseText {
+  background: #F6F6F6;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.CollapseText p {
+  color: #FF6060;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  letter-spacing: 0;
+  font-weight: 400;
+  line-height: 142.6%; /* 34.224px */
+  padding: 10px;
+}
+

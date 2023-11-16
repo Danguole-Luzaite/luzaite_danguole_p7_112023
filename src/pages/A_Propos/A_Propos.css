@@ -1,0 +1,31 @@
+/*.AProposSection {
+  
+}
+*/
+.AProposImageBanner{
+  max-width: 1240px;
+  height: 223px;
+  margin: 40px auto;
+  border-radius: 25px;
+  /* darken background image  */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+   url("../../assets/kalen-emsley.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.CollapseWrap{
+  height: 100%;
+  max-width: 1023px;
+  margin: 40px auto;
+}
+
+/* version mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .AProposImageBanner {
+    height: 111px;
+  }
+}
+  

@@ -2,7 +2,7 @@ import React from 'react';
 //import { useNavigate } from 'react-router-dom';
 import "../Accueil/Accueil.css";
 import Banner from '../../components/Banner';
-import Card from '../../components/Card/Card';
+import Card from '../../components/Card';
 import data from "../../data/logements.json";
 
 /* 
