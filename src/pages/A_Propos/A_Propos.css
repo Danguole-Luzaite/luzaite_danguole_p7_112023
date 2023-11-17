@@ -1,31 +1,36 @@
-/*.AProposSection {
-  
+.AProposSection {
+  padding: 0 7%;
 }
-*/
+
 .AProposImageBanner{
   max-width: 1240px;
   height: 223px;
   margin: 40px auto;
   border-radius: 25px;
-  /* darken background image  */
+  /* darken background image */
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
    url("../../assets/kalen-emsley.png");
+  mix-blend-mode: darken; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .CollapseWrap{
   height: 100%;
   max-width: 1023px;
   margin: 40px auto;
+  margin-bottom: 100px;
 }
 
 /* version mobile (max-width: 600px) */
 @media (max-width: 600px) {
   .AProposImageBanner {
-    height: 111px;
+    height: 223px
+  }
+
+  .AProposSection {
+    padding: 0 20px;
   }
 }
   

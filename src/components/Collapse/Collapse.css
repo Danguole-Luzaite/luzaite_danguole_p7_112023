@@ -8,6 +8,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  margin-bottom: 40px;
 }
 
 .CollapseTitle {
@@ -25,15 +26,14 @@
   cursor: pointer;
 }
 
+/* à l'état ouvert */
+
 .CollapseLarge {
-  /* min-height: 184px; */
   max-width: 1023px;
   background: #F6F6F6;
   border-radius: 5px;
   min-height: 100%;
 }
-
-/* à l'état ouvert */
 
 .CollapseText {
   background: #F6F6F6;
@@ -48,7 +48,28 @@
   font-style: normal;
   letter-spacing: 0;
   font-weight: 400;
-  line-height: 142.6%; /* 34.224px */
+  line-height: 34.2px;
   padding: 10px;
 }
 
+/* version mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .CollapseSmall {
+    height: 30px;
+  }
+
+  .CollapseTitle {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .CollapseText p {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .ArrowButton {
+    max-height: 18px;
+  }
+
+}

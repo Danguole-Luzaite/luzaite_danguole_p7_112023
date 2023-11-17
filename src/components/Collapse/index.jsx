@@ -3,13 +3,13 @@ import "../Collapse/Collapse.css";
 import ArrowBack from '../../assets/SVG/ArrowBack';
 import ArrowUp from '../../assets/SVG/ArrowUp';
 
-function Collapse() {
+function Collapse(props) {
   const [isOpen, setIsOpen] = useState(true);
 
   return isOpen ? (
   // composant collapse à l'état fermé  
       <div className='CollapseSmall'>
-        <h3 className='CollapseTitle'>Respect</h3>
+        <h3 className='CollapseTitle'>{props.title}</h3>
         <button className="ArrowButton" onClick={()=> setIsOpen(false)}>
           <ArrowBack/>
         </button>
@@ -17,16 +17,13 @@ function Collapse() {
     ) : ( // composant collapse à l'état ouvert
     <div className='CollapseLarge'>
       <div className='CollapseSmall'>
-        <h3 className='CollapseTitle'>Respect</h3>
+        <h3 className='CollapseTitle'>{props.title}</h3>
         <button className="ArrowButton" onClick={()=> setIsOpen(true)}>
           <ArrowUp/>
         </button>
       </div>
         <div className='CollapseText'>
-          <p>
-            La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire 
-            ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
-          </p>
+          <p>{props.description}</p>
         </div>
     </div> 
     )
