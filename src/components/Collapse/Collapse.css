@@ -61,6 +61,7 @@
   .CollapseTitle {
     font-size: 13px;
     font-weight: 500;
+    height: 100%;
   }
 
   .CollapseText p {
