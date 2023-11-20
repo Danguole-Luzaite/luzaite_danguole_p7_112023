@@ -1,6 +1,6 @@
 import styled from "styled-components";
 // import PropTypes from "prop-types";
-// import data from "../../data/logements.json";
+
 
 const StyledTag = styled.div`
   background-color: #ff6060;
