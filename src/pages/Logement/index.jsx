@@ -1,8 +1,17 @@
 import React from "react";
+import "../Logement/Logement.css";
+import Tag from "../../components/Tag";
 
 function Logement() {
   return (
-    <h1>Logement</h1>
+    <section className="SectionLogement">
+      <div className="Carrousel">
+        {/* insert component Carrousel */}
+      </div>
+      <div className="TagWrap">
+        <Tag />
+      </div>
+    </section>
   )
 };
 

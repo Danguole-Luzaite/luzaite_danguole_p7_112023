@@ -1,0 +1,16 @@
+.SectionLogement {
+  width: 87%;
+  margin: 60px auto;
+}
+
+.Carrousel {
+  width: auto;
+  height: 415px;
+  border: 1px solid coral;
+}
+
+.TagWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
