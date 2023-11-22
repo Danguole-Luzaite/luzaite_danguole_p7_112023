@@ -3,19 +3,36 @@ import "../Logement/Logement.css";
 import Tag from "../../components/Tag";
 import DefaultAvatar from "../../assets/Host.png";
 import Rate from "../../assets/_Rate.png";
-// import data from "../../data/logements.json";
+import Carrousel from "../../components/Carrousel";
+//import data from "../../data/logements.json";
+
+
+// function showDataTest() {
+//   return console.log(data);
+// }
+// showDataTest();
+
 
 function Logement() {
+
+  // data.pictures
+  const slides = [
+    {url: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"},
+    {url: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg"},
+    {url: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg"},
+    {url: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg"},
+  ];
+
   return (
     <section className="SectionLogement">
       <div className="Carrousel">
-        {/* insert composant Carrousel */}
+        <Carrousel slides={slides} />
       </div>
 
       <div className="InfoLogementContainer">
         <div className="InfoWrap">
-          <h1 className="LogementTitle">Cozy loft on the Canal Saint-Martin</h1>
-          <p className="LogementLocation">Paris, Île-de-France</p>
+          <h1 className="LogementTitle">data.title</h1>
+          <p className="LogementLocation">data.location</p>
             {/* composant Tag */}
           <div className="TagWrap">
               <Tag />

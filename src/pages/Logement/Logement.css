@@ -4,11 +4,10 @@
 }
 
 .Carrousel {
-  min-width: 50%;
-  margin: auto;
+  display: flex;
+  justify-content: center;
   height: 415px;
-  border-radius: 20px;
-  border: 1px solid coral;
+  border-radius: 25px;
 }
 /* Information pour de logement*/
 .InfoLogementContainer {
@@ -74,6 +73,7 @@
 .HostPicture {
   height: 64px;
   width: 64px;
+  border-radius: 50%;
 }
 
 .HostRate {
