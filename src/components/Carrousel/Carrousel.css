@@ -7,9 +7,9 @@
 .CarrouselSlides {
   height: 100%;
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  object-fit: cover;
+  /* background-repeat: no-repeat; */
+  object-position: center;
   border-radius: 25px;
 }
 
@@ -18,7 +18,7 @@
   cursor: pointer;
   background: none;
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translate(0, -50%);
   z-index: 1;
 }
@@ -29,4 +29,23 @@
 
 .ArrowRight {
   right: 7%;
+}
+
+.SlidesNumber{
+  height: 32px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 25.7px;
+  position: absolute;
+  right: 50%;
+  top: 57%;
+}
+
+/* version mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .SlidesNumber {
+    display: none;
+  }
 }

@@ -13,6 +13,7 @@ import PageDErreur from './pages/PageDErreur';
 const container = document.getElementById('root');
 const root = ReactDOMClient.createRoot(container);
 
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0 auto;
@@ -29,7 +30,7 @@ root.render(
               <Route path="*" element={<PageDErreur />} />
               <Route path="/" element={<Accueil />} />
               <Route path="/A_Propos" element={<APropos />} />
-              <Route path="/Logement" element={<Logement />} />
+              <Route path="/Logement/:id" element={<Logement />} />
           </Routes>
         <Footer/>
     </Router>

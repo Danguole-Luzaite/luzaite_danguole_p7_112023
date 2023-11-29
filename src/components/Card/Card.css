@@ -10,6 +10,7 @@
   background-size: cover;
   background-position: center;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .Thumb:hover {
@@ -19,7 +20,7 @@
 
 .TitreDeLaLocation {
   height: 52px;
-  width: 300px;
+  max-width: 300px;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -36,11 +37,11 @@
 @media (max-width: 600px) {
   .Thumb {
     height: 255px;
-    width: 335px;
+    max-width: 335px;
   }
 
   .TitreDeLaLocation {
-    width: 296px;
+    max-width: 296px;
     font-size: 18px;
   }
 }

@@ -1,56 +1,68 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import "../Logement/Logement.css";
 import Tag from "../../components/Tag";
-import DefaultAvatar from "../../assets/Host.png";
+//import DefaultAvatar from "../../assets/Host.png";
 import Rate from "../../assets/_Rate.png";
 import Carrousel from "../../components/Carrousel";
-//import data from "../../data/logements.json";
-
-
-// function showDataTest() {
-//   return console.log(data);
-// }
-// showDataTest();
+import CollapseDescription from "../../components/CollapseDescription";
+import CollapseEquipments from "../../components/CollapseEquipments";
 
 
 function Logement() {
 
-  // data.pictures
-  const slides = [
-    {url: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"},
-    {url: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg"},
-    {url: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg"},
-    {url: "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg"},
-  ];
+  const [currentLogement, setCurrentLogement] = useState([]);
+  // Id du logement actuel ouvert sur la page
+  const { id } = useParams();
+    
+    //fetch les données de l'objet actuel d'hébergement par son identifiant
+   useEffect(getData, [id])
+  
+  function getData() {
+    fetch("/logements.json")
+    .then(response => response.json())
+    .then(data => {
+     const logement = data.find((logement) => logement.id === id );
+      console.log(logement);
+     setCurrentLogement(logement)
+    })
+    .catch(error => console.error('Erreur lors de la récupération des détails des données du logement:', error));
+  }
+
 
   return (
     <section className="SectionLogement">
+      {/* composant Carrousel avec slides des images */}
       <div className="Carrousel">
-        <Carrousel slides={slides} />
+        <Carrousel slides = {currentLogement.pictures} />
       </div>
 
       <div className="InfoLogementContainer">
         <div className="InfoWrap">
-          <h1 className="LogementTitle">data.title</h1>
-          <p className="LogementLocation">data.location</p>
+          <h1 className="LogementTitle">{currentLogement.title}</h1>
+        <p className="LogementLocation">{currentLogement.location}</p>
             {/* composant Tag */}
-          <div className="TagWrap">
-              <Tag />
-          </div>
+          <ul className="TagWrap">
+            <Tag tags={currentLogement.tags} />
+             
+          </ul>
         </div>
 
+          {/* Nom et photo de l'hôte : */}
         <div className="HostInfoWrap">
           <div className="HostInfo">
-            <p className="HostName">Nathalie Jean</p>
-            <img src={DefaultAvatar} alt="avatar de l'hôte" className="HostPicture"/>
+            <p className="HostName">{currentLogement.host?.name}</p>
+            <img src={currentLogement.host?.picture} alt="avatar de l'hôte" className="HostPicture"/>
           </div>
           <img src={Rate} alt="note de l'hôte" className="HostRate"/>
         </div>
       </div>
-      
+
+      {/* description et infos des équipements de l'appartement :*/}
       <div className="LogementCollapseContainer">
-        {/* composant Collapse 'Description' */}
+        <CollapseDescription description={currentLogement.description}/>
         {/* composant Collapse 'Equipments' */}
+        <CollapseEquipments equipments={currentLogement.equipments}/>
       </div> 
     </section>
   )

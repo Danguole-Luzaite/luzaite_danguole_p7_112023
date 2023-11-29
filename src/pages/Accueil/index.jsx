@@ -5,12 +5,6 @@ import Banner from '../../components/Banner';
 import Card from '../../components/Card';
 import data from "../../data/logements.json";
 
-/* 
-function showDataTest() {
-  return console.log(data);
-}
-showDataTest()
-*/
 
 function Accueil() {
 //const navigate = useNavigate(); 
@@ -18,16 +12,18 @@ function Accueil() {
   return (
     <div className='HomeSection'>
       <Banner/>
-      <div className='Gallery'>
+      <ul className='Gallery'>
         {data.map((card) => (
-          <Card
-            key={card.id}
-            cover={card.cover}
-            title={card.title}
-//            onClick={ ()=> }
-          />
+          <li key={card.id}> 
+            <Card
+              key={card.id}
+              cover={card.cover}
+              title={card.title}
+              id={card.id}
+            />
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   )
 };

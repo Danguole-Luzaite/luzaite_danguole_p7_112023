@@ -8,6 +8,8 @@
   justify-content: center;
   height: 415px;
   border-radius: 25px;
+  list-style: none;
+  margin-bottom: 20px;
 }
 /* Information pour de logement*/
 .InfoLogementContainer {
@@ -20,6 +22,7 @@
   flex-wrap: nowrap;
   flex-direction: column;
   color: #ff6060;
+  width: 50%;
 }
 
 .LogementTitle {
@@ -41,8 +44,9 @@
 .TagWrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0; 
+  margin: 20px 0;
+  padding-left: 0px;
+  list-style: none; 
 }
 
 /* Information pour d'host*/
@@ -83,7 +87,50 @@
 
 /* Collapse composants : description et equipments */
 .LogementCollapseContainer {
-  min-width: 50%;
-  margin: auto;
+  width: 100%;
+  margin: 40px auto;
   display: flex;
+  justify-content: space-between;
+}
+
+/* version mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .Carrousel {
+    height: 255px;
+  }
+
+  .InfoLogementContainer {
+    flex-direction: column;
+  }
+
+  .LogementTitle {
+    font-size: 1.3em;
+    line-height: 26px;
+  }
+
+  .LogementLocation {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  .HostInfoWrap {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .HostRate {
+    max-width: 100px;
+    max-height: 20px;
+  }
+
+  .HostName {
+    max-width: 100px;
+    line-height: 18px;
+    font-size: 0.9em;
+  }
+
+  .LogementCollapseContainer {
+    flex-direction: column;
+  }
 }

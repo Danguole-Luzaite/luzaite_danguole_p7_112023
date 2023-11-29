@@ -1,38 +1,37 @@
 import styled from "styled-components";
-// import PropTypes from "prop-types";
 
 
-const StyledTag = styled.div`
+const StyledTag = styled.li`
   background-color: #ff6060;
   border-radius: 10px;
   min-height: 25px;
   min-width: 115px;
   text-align: center;
   margin: 10px 0;
+  margin-right: 20px;
 `;
 
 const StyledTagText = styled.p`
   color: #ffffff;
-  font-size: 1em;
+  font-size: 0.95em;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 20px;
   margin: 0;
-  padding: 2px 10px;
+  padding: 5px 10px;
 `;
 
-// { StyledTag, text = "data.tags" }
-function Tag() {
+
+function Tag({tags}) {
+
+  console.log("TAGS", tags)
   return(
-    <StyledTag>
-      {/* {data.text} */}
-      <StyledTagText>text</StyledTagText>
-    </StyledTag>
+    tags?.map((tags)=> (
+      <StyledTag>
+        <StyledTagText>{tags}</StyledTagText>
+      </StyledTag>
+    ))
   )
 };
-
-// Tag.propTypes = {
-//   text: PropTypes.string,
-// };
 
 export default Tag

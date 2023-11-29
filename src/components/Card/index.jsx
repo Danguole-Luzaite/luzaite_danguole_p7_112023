@@ -1,21 +1,19 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import "../Card/Card.css";
-// onClick={()=>navigate("/Logement")}
 
 function Card(props) {
   const title = props.title;
-  const navigate = useNavigate();
 
-//  style={{ backgroundImage: `url(${props.cover})` }}   
   return (
-    <div className="Thumb" 
+      // obtenir id des logements avec state
+    <Link to={`/Logement/${props.id}`}  className="Thumb" 
       style={{ backgroundImage: `url(${props.cover})` }} 
-      onClick={()=>navigate("/Logement")} >
+    >
       <span className="TitreDeLaLocation">
         {title}
       </span>
-    </div>
+    </Link>
   )
 };
 
