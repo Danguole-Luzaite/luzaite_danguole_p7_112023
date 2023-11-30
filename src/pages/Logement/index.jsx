@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "../Logement/Logement.css";
 import Tag from "../../components/Tag";
 //import DefaultAvatar from "../../assets/Host.png";
@@ -14,19 +14,19 @@ function Logement() {
   const [currentLogement, setCurrentLogement] = useState([]);
   // Id du logement actuel ouvert sur la page
   const { id } = useParams();
-    
+  const navigate = useNavigate();  
     //fetch les données de l'objet actuel d'hébergement par son identifiant
-   useEffect(getData, [id])
+   useEffect(getData, [id, navigate])
   
   function getData() {
     fetch("/logements.json")
     .then(response => response.json())
     .then(data => {
      const logement = data.find((logement) => logement.id === id );
-      console.log(logement);
-     setCurrentLogement(logement)
+     console.log(logement);
+     setCurrentLogement(logement);
     })
-    .catch(error => console.error('Erreur lors de la récupération des détails des données du logement:', error));
+    .catch(error => console.error('Erreur lors de la récupération des détails des données du logement:', error)); 
   }
 
 
@@ -44,7 +44,6 @@ function Logement() {
             {/* composant Tag */}
           <ul className="TagWrap">
             <Tag tags={currentLogement.tags} />
-             
           </ul>
         </div>
 

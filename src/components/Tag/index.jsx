@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const StyledTag = styled.li`
   background-color: #ff6060;
   border-radius: 10px;
@@ -21,13 +20,12 @@ const StyledTagText = styled.p`
   padding: 5px 10px;
 `;
 
-
 function Tag({tags}) {
 
-  console.log("TAGS", tags)
+  //console.log("TAGS", tags)
   return(
     tags?.map((tags)=> (
-      <StyledTag>
+      <StyledTag >
         <StyledTagText>{tags}</StyledTagText>
       </StyledTag>
     ))

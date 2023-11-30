@@ -6,8 +6,6 @@ import ArrowRight from "../../assets/SVG/ArrowRight";
 
 function Carrousel({slides}) {
   const [CurrentIndex, setCurrentIndex] = useState(0);
-  // const slides = currentLogement.picture;
-
 
   const previousSlide = () => {
     // pour vérifier si c'est la première image affichée
@@ -24,17 +22,26 @@ function Carrousel({slides}) {
     const newIndex = isLastPicture? 0 : CurrentIndex +1;
     setCurrentIndex(newIndex);
   };
- 
-  return (
+
+  // lorsqu'il n'y a qu'une seule diapositive, masquer Arrows et "SlidesNumber"
+  const isOneSlide = slides?.length > 1;
+     
+  
+  return isOneSlide?(
     <div className="CarrouselContainer">
-      <button className="ArrowLeft" onClick={previousSlide}>
-         <ArrowLeft />
+      <button className="ArrowLeft" onClick={previousSlide} >
+        <ArrowLeft />
       </button>
-      <button className="ArrowRight" onClick={nextSlide}>
-         <ArrowRight />
+      <button className="ArrowRight" onClick={nextSlide} >
+        <ArrowRight />
       </button>
       {/* Pour afficher l’index de image actuelle / le nombre d’images au total */}
-      <div className="SlidesNumber">{CurrentIndex + 1}/{slides?.length}</div>
+      <div className="SlidesNumber">{CurrentIndex + 1}/{slides?.length} </div>
+      {/* Les photos de l'appartement ( slides = {currentLogement.pictures} ) */}
+      <img className="CarrouselSlides" src={slides?.[CurrentIndex]} alt="logement" />
+    </div>
+    ) : (
+    <div className="CarrouselContainer">
       {/* Les photos de l'appartement ( slides = {currentLogement.pictures} ) */}
       <img className="CarrouselSlides" src={slides?.[CurrentIndex]} alt="logement" />
     </div>
