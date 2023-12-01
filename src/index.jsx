@@ -30,7 +30,7 @@ root.render(
               <Route path="*" element={<PageDErreur />} />
               <Route path="/" element={<Accueil />} />
               <Route path="/A_Propos" element={<APropos />} />
-              <Route path="/Logement/:id" element={<Logement />} />
+              <Route path="/Logement/:id" element={<Logement />}/>
           </Routes>
         <Footer/>
     </Router>

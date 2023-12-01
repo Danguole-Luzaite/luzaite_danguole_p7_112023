@@ -14,4 +14,17 @@
   padding-inline-start: 0;
   margin-block-start: 45px;
   margin-block-end: 45px;
+  padding-top: 40px;
+}
+
+/* version mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .Gallery {
+    background-color: white;
+    padding-top: 0px;
+    margin-block-start: 20px;
+  }
+  .ListItem {
+    width: 100%;
+  }
 }

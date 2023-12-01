@@ -26,8 +26,8 @@ function CollapseEquipments({equipments}) {
         <div>
           {/* <ul><li></li></ul> */}
           <ul className='CollapseEquipText'>
-            {equipments?.map((equipments) => (
-              <li key={equipments.id}>{equipments}</li>
+            {equipments?.map((equipments, index) => (
+              <li key={index}>{equipments}</li>
             ))}
           </ul>
          

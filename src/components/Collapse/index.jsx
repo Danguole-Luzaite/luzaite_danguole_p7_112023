@@ -10,7 +10,7 @@ function Collapse(props) {
   // composant collapse à l'état fermé  
       <div className='CollapseSmall'>
         <h3 className='CollapseTitle'>{props.title}</h3>
-        <button className="ArrowButton" onClick={()=> setIsOpen(false)}>
+        <button className="CollapseArrowButton" onClick={()=> setIsOpen(false)}>
           <ArrowBack/>
         </button>
       </div> 
@@ -18,7 +18,7 @@ function Collapse(props) {
     <div className='CollapseLarge'>
       <div className='CollapseSmall'>
         <h3 className='CollapseTitle'>{props.title}</h3>
-        <button className="ArrowButton" onClick={()=> setIsOpen(true)}>
+        <button className="CollapseArrowButton" onClick={()=> setIsOpen(true)}>
           <ArrowUp/>
         </button>
       </div>

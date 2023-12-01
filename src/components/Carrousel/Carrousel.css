@@ -28,7 +28,8 @@
 }
 
 .ArrowRight {
-  right: 7%;
+  /* right: 7%; */
+  left: 78%;
 }
 
 .SlidesNumber{
@@ -47,5 +48,9 @@
 @media (max-width: 600px) {
   .SlidesNumber {
     display: none;
+  }
+
+  .ArrowLeft, .ArrowRight {
+    top: 35%;
   }
 }

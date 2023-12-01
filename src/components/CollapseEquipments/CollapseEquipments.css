@@ -1,7 +1,8 @@
 /* à l'état fermé   */
 .CollapseEquipSmall {
   height: 47px;
-  width: 100%;
+  /* width: 100%; */
+  width: 94%;
   background-color: #ff6060;
   border-radius: 5px;
   display: flex;
@@ -29,7 +30,7 @@
 /* à l'état ouvert */
 
 .CollapseEquipLarge {
-  width: 45%;
+  width: 49%;
   background: #F6F6F6;
   border-radius: 5px;
   height: 100%;
@@ -43,11 +44,10 @@
   list-style: none;
   font-family: Montserrat;
   font-size: 24px;
-  font-style: normal;
-  letter-spacing: 0;
-  font-weight: 400;
-  line-height: 34.2px;
-  padding: 10px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  line-height: 34px;
+  padding: 20px;
 }
 
 
@@ -58,7 +58,7 @@
   }
 
   .CollapseEquipTitle {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     height: 100%;
   }

@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "../Logement/Logement.css";
 import Tag from "../../components/Tag";
-//import DefaultAvatar from "../../assets/Host.png";
-import Rate from "../../assets/_Rate.png";
+import Rate from "../../assets/SVG/Rate";
 import Carrousel from "../../components/Carrousel";
 import CollapseDescription from "../../components/CollapseDescription";
 import CollapseEquipments from "../../components/CollapseEquipments";
@@ -24,11 +23,13 @@ function Logement() {
     .then(data => {
      const logement = data.find((logement) => logement.id === id );
      console.log(logement);
+     if(!logement){
+      navigate("/404")
+     }
      setCurrentLogement(logement);
     })
     .catch(error => console.error('Erreur lors de la récupération des détails des données du logement:', error)); 
   }
-
 
   return (
     <section className="SectionLogement">
@@ -53,7 +54,9 @@ function Logement() {
             <p className="HostName">{currentLogement.host?.name}</p>
             <img src={currentLogement.host?.picture} alt="avatar de l'hôte" className="HostPicture"/>
           </div>
-          <img src={Rate} alt="note de l'hôte" className="HostRate"/>
+          {/* Rate de l'hôte : */}
+          <Rate className="HostRate" rate={currentLogement.rating}/>
+            
         </div>
       </div>
 

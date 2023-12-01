@@ -14,7 +14,7 @@ function Accueil() {
       <Banner/>
       <ul className='Gallery'>
         {data.map((card) => (
-          <li key={card.id}> 
+          <li key={card.id} className='ListItem'> 
             <Card
               key={card.id}
               cover={card.cover}

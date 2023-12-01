@@ -9,12 +9,16 @@
   height: 415px;
   border-radius: 25px;
   list-style: none;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  max-width: 1240px;
+  margin: 40px auto;
 }
 /* Information pour de logement*/
 .InfoLogementContainer {
   display: flex;
   justify-content: space-between;
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
 .InfoWrap {
@@ -87,7 +91,8 @@
 
 /* Collapse composants : description et equipments */
 .LogementCollapseContainer {
-  width: 100%;
+  /* width: 100%; */
+  max-width: 1240px;
   margin: 40px auto;
   display: flex;
   justify-content: space-between;
@@ -112,6 +117,10 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
+  }
+
+  .InfoWrap {
+    width: 100%;
   }
 
   .HostInfoWrap {

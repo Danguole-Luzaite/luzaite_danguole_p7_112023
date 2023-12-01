@@ -30,10 +30,19 @@
 @media (max-width: 600px) {
   .BannerImage {
     height: 111px;
+    border-radius: 10px;
   }
 
   .BannerText {
     font-size: 24px;
     line-height: 24px;
+    text-align: left;
+    left: 55%;
+    top: 50%;
+    position: relative;
+  }
+
+  .BannerTitle {
+    width: 55%;
   }
 }

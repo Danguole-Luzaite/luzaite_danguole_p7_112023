@@ -37,11 +37,14 @@
 @media (max-width: 600px) {
   .Thumb {
     height: 255px;
-    max-width: 335px;
+    /* max-width: 335px; */
+    width: 100%;
+    margin: 0 0 20px 0;
   }
 
   .TitreDeLaLocation {
-    max-width: 296px;
+    max-width: 480px;
     font-size: 18px;
+    padding: 16px;
   }
 }
