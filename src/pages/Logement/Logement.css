@@ -4,12 +4,9 @@
 }
 
 .Carrousel {
-  display: flex;
-  justify-content: center;
   height: 415px;
   border-radius: 25px;
   list-style: none;
-  /* margin-bottom: 20px; */
   max-width: 1240px;
   margin: 40px auto;
 }
@@ -34,7 +31,7 @@
   font-weight: 500;
   line-height: 52px;
   letter-spacing: 0;
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
 }
 
 .LogementLocation {
@@ -89,6 +86,20 @@
   max-height: 40px;
 }
 
+.StarRate{
+  height: 26px;
+  width: 39px;
+}
+
+/* version mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .StarRate {
+    height: 20px;
+    width: 20px;
+    padding-right: 5px;
+  }
+}
+
 /* Collapse composants : description et equipments */
 .LogementCollapseContainer {
   /* width: 100%; */
@@ -100,8 +111,13 @@
 
 /* version mobile (max-width: 600px) */
 @media (max-width: 600px) {
+  .SectionLogement {
+    margin: 20px auto;
+  }
+
   .Carrousel {
     height: 255px;
+    margin: 0 auto;
   }
 
   .InfoLogementContainer {
@@ -123,6 +139,10 @@
     width: 100%;
   }
 
+  .TagWrap {
+    margin: 0;
+  }
+
   .HostInfoWrap {
     flex-direction: row-reverse;
     align-items: center;
@@ -136,10 +156,16 @@
   .HostName {
     max-width: 100px;
     line-height: 18px;
-    font-size: 0.9em;
+    font-size: 0.95em;
+  }
+
+  .HostPicture {
+    width: 42px;
+    height: 42px;
   }
 
   .LogementCollapseContainer {
     flex-direction: column;
+    margin: 15px auto;
   }
 }

@@ -1,13 +1,10 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
-// const rateActive = "#FF6060";
-// const rateInactive = "#E3E3E3";
+// note positive : "#FF6060";
+// note négative : "#E3E3E3";
 
 export default function Rate({rate}) {
-   const rateActive = {"height": "26px", "width": "39px"};
-   const rateInactive = {"height": "26px", "width": "39px"};
-
   return (
     <div>
       {[...Array(5)].map((star, index)=> {
@@ -16,7 +13,7 @@ export default function Rate({rate}) {
         // console.log(rate, index)
         return (
         <span key={index}>
-             <FaStar color={countRatings? "#E3E3E3" : "#FF6060"} style={ countRatings? rateActive : rateInactive } />
+             <FaStar  className="StarRate" color={countRatings? "#E3E3E3" : "#FF6060"}  />
         </span>
        )}
       )} 

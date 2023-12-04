@@ -10,10 +10,11 @@ const StyledTag = styled.li`
   margin-right: 20px;
     @media (max-width: 600px) {
       margin-right: 10px;
-      max-height: 20px;
-      max-width: 90px;
-      font-size: 14px;
+      max-height: 18px;
+      max-width: 84px;
+      font-size: 12px;
       font-weight: 500;
+      border-radius: 5px;
     }
 `;
 
@@ -26,8 +27,7 @@ const StyledTagText = styled.p`
   margin: 0;
   padding: 5px 10px;
     @media (max-width: 600px) {
-      line-height: 17px;
-      padding: 5px 5px;
+      line-height: 16px;
     }
 `;
 
