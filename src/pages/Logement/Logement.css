@@ -102,11 +102,10 @@
 
 /* Collapse composants : description et equipments */
 .LogementCollapseContainer {
-  /* width: 100%; */
   max-width: 1240px;
-  margin: 40px auto;
+  margin: 20px auto;
   display: flex;
-  justify-content: space-between;
+  column-gap: 12%;
 }
 
 /* version mobile (max-width: 600px) */
@@ -167,5 +166,6 @@
   .LogementCollapseContainer {
     flex-direction: column;
     margin: 15px auto;
+    height: 100%;
   }
 }

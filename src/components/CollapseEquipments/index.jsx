@@ -24,7 +24,7 @@ function CollapseEquipments({equipments}) {
         </button>
       </div>
         <div>
-          {/* <ul><li></li></ul> */}
+          {/* Liste d'équipement */}
           <ul className='CollapseEquipText'>
             {equipments?.map((equipments, index) => (
               <li key={index}>{equipments}</li>

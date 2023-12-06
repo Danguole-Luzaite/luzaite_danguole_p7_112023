@@ -26,7 +26,8 @@
 /* version mobile (max-width: 600px) */
 @media (max-width: 600px) {
   .AProposImageBanner {
-    height: 223px
+    height: 223px;
+    border-radius: 10px;
   }
 
   .AProposSection {

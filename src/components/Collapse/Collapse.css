@@ -24,6 +24,7 @@
   background-color: #ff6060;
   border-style: none;
   cursor: pointer;
+  height: 24px;
 }
 
 /* à l'état ouvert */
@@ -74,7 +75,8 @@
   }
 
   .CollapseArrowButton {
-    max-height: 40px;
+    max-height: 18px;
+    width: 32px;
   }
 
 }
