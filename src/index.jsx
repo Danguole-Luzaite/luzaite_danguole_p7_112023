@@ -1,38 +1,11 @@
-import React from 'react';
-import ReactDOMClient from 'react-dom/client';
-import {  BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Accueil from './pages/Accueil';
-import Header from './components/Header';
-import APropos from './pages/A_Propos';
-import Logement from './pages/Logement';
-import Footer from './components/Footer';
-import { createGlobalStyle } from 'styled-components';
-import PageDErreur from './pages/PageDErreur';
+import React from "react";
+import { createRoot } from 'react-dom/client';
+import Router from "./Router";
 
+// Utilisé la version React 18, nouveau nouveau moteur de rendu d'API racine createRoot qui remplace ReactDOM.render
 
 const container = document.getElementById('root');
-const root = ReactDOMClient.createRoot(container);
+const root = createRoot(container);
 
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0 auto;
-    font-family: "Montserrat-Medium", Helvetica;
-  }
-`
-
-root.render(
-  <React.StrictMode>
-    <Router>
-        <GlobalStyle/>
-        <Header />  
-          <Routes>
-              <Route path="*" element={<PageDErreur />} />
-              <Route path="/" element={<Accueil />} />
-              <Route path="/A_Propos" element={<APropos />} />
-              <Route path="/Logement/:id" element={<Logement />}/>
-          </Routes>
-        <Footer/>
-    </Router>
-  </React.StrictMode>
-)
+root.render(<Router/>);

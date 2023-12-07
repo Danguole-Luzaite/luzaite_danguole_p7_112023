@@ -22,7 +22,8 @@ function Logement() {
     .then(response => response.json())
     .then(data => {
      const logement = data.find((logement) => logement.id === id );
-     console.log(logement);
+     // test data
+    //  console.log(logement);
      if(!logement){
       navigate("/404")
      }

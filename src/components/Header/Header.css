@@ -28,9 +28,13 @@
   font-weight: 500;
   letter-spacing: 0;
   line-height: 34.2px;
-  text-decoration: underline;
   width: 136px;
   text-align: right;
+  text-decoration: none;
+}
+
+.TextWrapper:hover {
+  text-decoration: underline;
 }
 
 .APropos {
@@ -44,6 +48,11 @@
   width: 116px;
   text-decoration: none;
 }
+
+.APropos:hover {
+  text-decoration: underline;
+}
+
 
 /* version mobile (max-width: 600px) */
 

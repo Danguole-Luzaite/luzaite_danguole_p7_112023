@@ -44,6 +44,9 @@
 
 /* version mobile (max-width: 600px) */
 @media (max-width: 600px) {
+  .CarrouselSlides {
+    border-radius: 10px;
+  }
   .SlidesNumber {
     display: none;
   }
