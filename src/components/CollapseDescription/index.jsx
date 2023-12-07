@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "../CollapseDescription/CollapseDescription.css";
+import "../CollapseDescription/CollapseDescription.scss";
 import ArrowBack from '../../assets/SVG/ArrowBack';
 import ArrowUp from '../../assets/SVG/ArrowUp';
 

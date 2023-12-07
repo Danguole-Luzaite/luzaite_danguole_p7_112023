@@ -1,5 +1,4 @@
-//import React from "react";
-import "../A_Propos/A_Propos.css";
+import "../A_Propos/A_Propos.scss";
 import Collapse from "../../components/Collapse";
 import descriptionData from '../../data/a_propos.json';
 

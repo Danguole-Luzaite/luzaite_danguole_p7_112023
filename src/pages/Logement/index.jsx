@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import "../Logement/Logement.css";
+import "../Logement/Logement.scss";
 import Tag from "../../components/Tag";
 import Rate from "../../assets/SVG/Rate";
 import Carrousel from "../../components/Carrousel";

@@ -1,5 +1,5 @@
 import React from 'react';
-import "../Accueil/Accueil.css";
+import "../Accueil/Accueil.scss";
 import Banner from '../../components/Banner';
 import Card from '../../components/Card';
 import data from "../../data/logements.json";

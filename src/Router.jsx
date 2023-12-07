@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
 function Router() {
   return (
     <React.StrictMode>
-      <BrowserRouter>
+      <BrowserRouter basename="/Kasa">
           <GlobalStyle/>
           <Header />  
           <Routes>

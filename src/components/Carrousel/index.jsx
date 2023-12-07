@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "../Carrousel/Carrousel.css";
+import "../Carrousel/Carrousel.scss";
 import ArrowLeft from "../../assets/SVG/ArrowLeft";
 import ArrowRight from "../../assets/SVG/ArrowRight";
 
