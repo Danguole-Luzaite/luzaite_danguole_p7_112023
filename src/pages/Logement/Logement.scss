@@ -91,15 +91,6 @@
   width: 39px;
 }
 
-/* version mobile (max-width: 600px) */
-@media (max-width: 600px) {
-  .StarRate {
-    height: 20px;
-    width: 20px;
-    padding-right: 5px;
-  }
-}
-
 /* Collapse composants : description et equipments */
 .LogementCollapseContainer {
   max-width: 1240px;
@@ -107,6 +98,7 @@
   display: flex;
   column-gap: 12%;
 }
+
 
 /* version mobile (max-width: 600px) */
 @media (max-width: 600px) {
@@ -150,6 +142,12 @@
   .HostRate {
     max-width: 100px;
     max-height: 20px;
+  }
+  
+  .StarRate {
+    height: 20px;
+    width: 20px;
+    padding-right: 5px;
   }
 
   .HostName {

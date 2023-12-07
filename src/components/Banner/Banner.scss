@@ -9,40 +9,40 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
+  .BannerText {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* pour centrer un élément horizontalement et verticalement dans son conteneur parent */
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 68.4px;
+  }
 }
 
-.BannerText {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* pour centrer un élément horizontalement et verticalement dans son conteneur parent */
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  font-family: "Montserrat-Medium", Helvetica;
-  font-size: 48px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 68.4px;
-}
 
 /* version mobile (max-width: 600px) */
 @media (max-width: 600px) {
   .BannerImage {
     height: 111px;
     border-radius: 10px;
-  }
 
-  .BannerText {
-    font-size: 24px;
-    line-height: 24px;
-    text-align: left;
-    left: 55%;
-    top: 50%;
-    position: relative;
-  }
+    .BannerText {
+      font-size: 24px;
+      line-height: 24px;
+      text-align: left;
+      left: 55%;
+      top: 50%;
+      position: relative;
 
-  .BannerTitle {
-    width: 55%;
+      .BannerTitle {
+        width: 55%;
+      }
+    }
   }
 }

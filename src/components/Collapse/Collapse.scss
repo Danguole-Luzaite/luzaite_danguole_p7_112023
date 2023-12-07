@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 5px 20px;
   margin-bottom: 40px;
 }
 
@@ -41,18 +41,18 @@
   background: #F6F6F6;
   height: 100%;
   border-radius: 5px;
-  padding: 0 20px 20px 20px;
+  padding: 0 20px;
+    p {
+      color: #FF6060;
+      font-family: "Montserrat-Regular", Helvetica;
+      font-size: 24px;
+      letter-spacing: 1px;
+      font-weight: 100;
+      line-height: 34px;
+      padding: 10px;
+    }
 }
 
-.CollapseText p {
-  color: #FF6060;
-  font-family: "Montserrat-Regular", Helvetica;
-  font-size: 24px;
-  letter-spacing: 1px;
-  font-weight: 100;
-  line-height: 34px;
-  padding: 10px;
-}
 
 /* version mobile (max-width: 600px) */
 @media (max-width: 600px) {
@@ -67,16 +67,17 @@
     align-self: center;
   }
 
-  .CollapseText p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    padding: 0 20px 50px 20px;
+  .CollapseText {
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      padding: 0 20px 30px 20px;
+    }
   }
 
   .CollapseArrowButton {
     max-height: 18px;
     width: 32px;
   }
-
 }
