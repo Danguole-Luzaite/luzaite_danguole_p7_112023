@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "../../assets/LOGO.png";
 import "../Header/Header.scss";
 
@@ -6,12 +6,12 @@ import "../Header/Header.scss";
 function Header() {
   return (
     <header className="NavContainer">
-        <Link to="/">
-            <img className="HomeLogo" src={Logo} alt="Le logo du site" />
-        </Link>
+        <NavLink to="/">
+            <img className="HomeLogo"  src={Logo} alt="Le logo du site" />
+        </NavLink>
         <nav className="NavWrapper">
-            <Link to="/" className="TextWrapper">Accueil</Link>
-            <Link to="/A_Propos" className="APropos">A Propos</Link>
+            <NavLink to="/" className="LinkAccueil">Accueil</NavLink>
+            <NavLink to="/A_Propos" className="LinkAPropos">A Propos</NavLink>
         </nav>
     </header>
   )

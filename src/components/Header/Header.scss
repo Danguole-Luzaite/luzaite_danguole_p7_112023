@@ -16,7 +16,7 @@
       width: 309px;
       display: flex;
       justify-content: space-between;
-        .TextWrapper {
+        .LinkAccueil {
           color: #ff6060;
           font-size: 24px;
           font-weight: 500;
@@ -28,8 +28,11 @@
             &:hover {
               text-decoration: underline;
             }
+            &.active {
+              text-decoration: underline;
+            }
         }
-        .APropos {
+        .LinkAPropos {
           color: #ff6060;
           font-size: 24px;
           font-weight: 500;
@@ -39,6 +42,9 @@
           width: 116px;
           text-decoration: none;
             &:hover {
+              text-decoration: underline;
+            }
+            &.active {
               text-decoration: underline;
             }
         }
@@ -59,13 +65,13 @@
         height: 17px;
         width: 144px;
         text-transform: uppercase;
-          .TextWrapper {
+          .LinkAccueil {
             font-size: 12px;
             height: 17px;
             line-height: 17px;
             width: 59px;
           }
-          .APropos {
+          .LinkAPropos {
             font-size: 12px;
             height: 17px;
             line-height: 17px;
