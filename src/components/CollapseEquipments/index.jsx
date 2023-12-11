@@ -10,7 +10,7 @@ function CollapseEquipments({equipments}) {
   return isOpen ? (
   // composant collapse à l'état fermé  
       <div className='CollapseEquipSmall'>
-        <h3 className='CollapseEquipTitle'>Équipement</h3>
+        <h3 className='CollapseEquipTitle'>Équipements</h3>
         <button className="ArrowButton" onClick={()=> setIsOpen(false)}>
           <ArrowBack/>
         </button>
@@ -18,7 +18,7 @@ function CollapseEquipments({equipments}) {
     ) : ( // composant collapse à l'état ouvert
     <div className='CollapseEquipLarge'>
       <div className='CollapseEquipSmall'>
-        <h3 className='CollapseEquipTitle'>Équipement</h3>
+        <h3 className='CollapseEquipTitle'>Équipements</h3>
         <button className="ArrowButton" onClick={()=> setIsOpen(true)}>
           <ArrowUp/>
         </button>
