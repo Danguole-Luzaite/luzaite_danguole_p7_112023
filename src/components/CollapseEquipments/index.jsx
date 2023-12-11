@@ -4,14 +4,14 @@ import ArrowBack from '../../assets/SVG/ArrowBack';
 import ArrowUp from '../../assets/SVG/ArrowUp';
 
 function CollapseEquipments({equipments}) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isClose, setIsClose] = useState(true);
 
 
-  return isOpen ? (
+  return isClose ? (
   // composant collapse à l'état fermé  
       <div className='CollapseEquipSmall'>
         <h3 className='CollapseEquipTitle'>Équipements</h3>
-        <button className="ArrowButton" onClick={()=> setIsOpen(false)}>
+        <button className="ArrowButton" onClick={()=> setIsClose(false)}>
           <ArrowBack/>
         </button>
       </div> 
@@ -19,7 +19,7 @@ function CollapseEquipments({equipments}) {
     <div className='CollapseEquipLarge'>
       <div className='CollapseEquipSmall'>
         <h3 className='CollapseEquipTitle'>Équipements</h3>
-        <button className="ArrowButton" onClick={()=> setIsOpen(true)}>
+        <button className="ArrowButton" onClick={()=> setIsClose(true)}>
           <ArrowUp/>
         </button>
       </div>
@@ -29,8 +29,7 @@ function CollapseEquipments({equipments}) {
             {equipments?.map((equipments, index) => (
               <li key={index}>{equipments}</li>
             ))}
-          </ul>
-         
+          </ul>         
         </div>
     </div> 
     )

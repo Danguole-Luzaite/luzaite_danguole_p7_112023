@@ -5,13 +5,13 @@ import ArrowUp from '../../assets/SVG/ArrowUp';
 
 
 function CollapseDescription({description}) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isClose, setIsClose] = useState(true);
 
-  return isOpen ? (
+  return isClose ? (
   // composant collapse à l'état fermé  
       <div className='CollapseDescSmall'>
         <h3 className='CollapseDescTitle'>Description</h3>
-        <button className="ArrowButton" onClick={()=> setIsOpen(false)}>
+        <button className="ArrowButton" onClick={()=> setIsClose(false)}>
           <ArrowBack/>
         </button>
       </div> 
@@ -19,7 +19,7 @@ function CollapseDescription({description}) {
     <div className='CollapseDescLarge'>
       <div className='CollapseDescSmall'>
         <h3 className='CollapseDescTitle'>Description</h3>
-        <button className="ArrowButton" onClick={()=> setIsOpen(true)}>
+        <button className="ArrowButton" onClick={()=> setIsClose(true)}>
           <ArrowUp/>
         </button>
       </div>
